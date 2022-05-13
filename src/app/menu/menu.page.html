@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" style="padding: 0;">
+      <ion-button (click)="backClicked()"><ion-icon name="arrow-back-outline" ></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Open Trivia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background:#142d4c;">
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-title style="color:#142d4c;text-align: center;">Welcome back, {{username}}!</ion-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card  style="--background:rgba(255, 255, 255, 0.785);">
+        <ion-card-content style="text-align:center;">
+          <ion-title style="color:#142d4c;">Choose difficulty</ion-title>
+          <ion-button expand="block" style="--background:white;color:#142d4c;font-weight: bold;" >Easy <ion-icon name="checkmark" color="success" ></ion-icon></ion-button>
+          <ion-button [routerLink]="['/trivia']" expand="block" style="--background:white;color:#142d4c;font-weight: bold;" >Medium </ion-button>
+          <ion-button expand="block" style="--background:white;color:#142d4c;font-weight: bold;" disabled="true" >Hard </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

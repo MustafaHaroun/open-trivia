@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'menu/:username',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'trivia',
+    loadChildren: () => import('./trivia/trivia.module').then( m => m.TriviaPageModule)
+  },
 ];
 
 @NgModule({
